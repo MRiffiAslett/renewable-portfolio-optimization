@@ -2,32 +2,6 @@
 
 This repository demonstrates a research-driven approach to designing an optimal portfolio of renewable energy assets (such as wind and solar) in the face of uncertain electricity demand and prices. The project uses **real** data from the U.S. Energy Information Administration (EIA) to construct and solve a **two-stage stochastic optimization** model in Python with Pyomo. To address uncertainty in a risk-averse manner, we apply techniques from **Conditional Value-at-Risk (CVaR)**, thereby emphasizing both expected costs and their worst-case tails.
 
-## Project Structure
-
-All files are organized so that data can be fetched, cleaned, and then used directly in the stochastic model.
-
-- **data/**: Contains the downloaded time-series of electricity demand.
-- **src/**: Includes Python scripts for:
-  - Data fetching (`data_fetch.py`)
-  - Model definition (`model.py`)
-  - Main execution workflow (`main.py`)
-- **requirements.txt**: Lists necessary Python libraries.
-- **README.md**: Provides the project overview.
-
-## Getting Started
-
-To replicate the experiments, install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-Next, obtain an EIA API key (available free from the EIA Open Data website) and set it as an environment variable or in a local `.env` file. Once your key is properly set, navigate to `src` and run:
-```bash
-python main.py
-```
-
-This script automatically fetches real data from EIA, saves it to `data/eia_data.csv`, and solves the stochastic optimization model. Results (such as optimal capacities for wind and solar) will appear in the console output.
-
 ## Methodology
 
 The methodology implemented here draws directly upon established research in stochastic programming. We take inspiration from:
