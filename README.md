@@ -17,13 +17,7 @@ We incorporate **Conditional Value-at-Risk (CVaR)** to ensure risk-averse behavi
 
 The mathematical model can be expressed as a **Mixed-Integer Linear Program (MILP)** if certain decisions, such as turbine block purchases, are integrally constrained. In this example, we primarily model capacity as continuous variables for simplicity, but Pyomo can handle discrete (integer) decisions as well. Solvers like **GLPK**, **CBC**, **Gurobi**, or **CPLEX** can be used to solve the resulting MILP.
 
-## Real Data Usage
 
-All demand data in this repository is sourced programmatically via the **EIA API**. By default, we fetch hourly demand from the ERCOT region (Texas). However, the code can be adapted easily to query any other region supported by EIA or to incorporate data from other providers for detailed price series. This ensures the study remains grounded in **real-world conditions** rather than simulated or synthetic data.
-
-## License
-
-This project is released under the **MIT License**.
 
 ## References
 
